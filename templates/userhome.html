@@ -39,14 +39,7 @@ USER HOME
                 <tr>
                     <td style="color: aliceblue;"><b>{{ element['PetID'] }}</b></td>
                     <td style="text-align:start; color: aliceblue;"><b>{{ element['Petname'] }}</b> <sub>{{ element['Age'] }} yrs old</sub></td>
-                    <!--
-                    <td style="text-align:center; color: aliceblue;">
-                    {% if {{ element['Vaccinated'] }} is True %}
-                    <b>DONE</b>
-                    {% else %}
-                    <b>TBD</b>
-                    {% endif %}
-                    </td>-->
+                    
                 </tr>
                 {% endfor %}
             </tbody>
