@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+HEALTHCARD
+{% endblock %}
+
+{% block body %}
+<div class="white-box">
+    <form action="/health" method="post">
+        <div class="dropdown">
+            <select class="form-select col-md-6" id="inputGroupSelect01" name="name_of_pet" placeholder="Pet name">
+                <option selected>Pet name</option>
+                {% for element in petnames %}
+                    {% set petname = element["Petname"] %}
+                    <option value=petname>{{ element["Petname"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <input class="form-control mx-auto w-auto" id="btn3" type="submit" value="Submit">
+        </div>
+    </form>
+    <table>
+        <thead>
+            <tr></tr>
+        </thead>
+    </table>
+
+</div>
+{% endblock %}

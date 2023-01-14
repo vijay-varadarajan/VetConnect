@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+USER HOME
+{% endblock %}
+
+{% block body %}
+<div>
+    <nav class="bg-light border navbar navbar-expand-md navbar-light" style="opacity: .5">
+        <div class="container-fluid">
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                {% if session["user_id"] %}
+                    <ul class="navbar-nav me-auto mt-2">
+                        <li class="nav-item"><img src="static/logo_final.jpg" alt="VETCONNECT" height="75px" width="105px" href="/"></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav ms-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <div class="white-box" style="height: auto">
+        <h2 style="text-align: center; color: aliceblue;">MY PETS</h2>
+        <table class="table table-borderless">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+                {% for element in petdetails %}
+                <tr>
+                    <td style="color: aliceblue;"><b>{{ element['PetID'] }}</b></td>
+                    <td style="text-align:start; color: aliceblue;"><b>{{ element['Petname'] }}</b> <sub>{{ element['Age'] }} yrs old</sub></td>
+                    <!--
+                    <td style="text-align:center; color: aliceblue;">
+                    {% if {{ element['Vaccinated'] }} is True %}
+                    <b>DONE</b>
+                    {% else %}
+                    <b>TBD</b>
+                    {% endif %}
+                    </td>-->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button style="position:relative; border-radius: 30px;"><span><a class="nav-link" href="/addpet" style="text-decoration: none;">Add new pet</a></span></button>
+        
+        
+    </div>
+    
+</div>
+{% endblock %}

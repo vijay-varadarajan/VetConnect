@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+HOSPITALS
+{% endblock %}
+
+{% block body %}
+<h1>Hospitals Nearby</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Hospital name</td>
+            <td>Type</td>
+            <td>Contact Details</td>
+            <td>Address</td>
+        </tr>
+    </thead>
+    <tbody>
+            {% for element in hosp %}
+                <tr>
+                    <td>{{ element['Name'] }}</td>
+                    <td>{{ element['Type'] }}</td>
+                    <td>{{ element['Contact_Details'] }}</td>
+                    <td>{{ element['Address'] }}</td>
+                </tr>
+            {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}

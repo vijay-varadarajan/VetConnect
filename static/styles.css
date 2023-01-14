@@ -1,0 +1,301 @@
+body {
+    background: #8b8b8b;
+    background-image: url("First\ page\ super\ final.jpg");
+    background-attachment: fixed;
+    cursor: url('catscratch2.gif'), auto;
+    background-size: cover;
+    
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    color: #353535;
+    font-family:sans-serif;
+    font-weight: bold;
+  }
+  #login-box {
+    position: relative;
+    margin: 5% auto;
+    width: 700px;
+    height: 450px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(85, 85, 85, 0.582);
+    border-radius: 2px;
+    padding-top: 40px;
+    background-color: #7777779b;
+  }
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    color: #676767;
+  }
+  .frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  input:hover{
+    border-color: #88c0f1;
+    border-width: 2px;
+  }
+  button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 0 30px;
+    width:fit-content;
+    padding: 2px 0;
+    box-shadow: 0 0 20px rgba(10, 128, 125, 0.2);
+    transition: 0.1s;
+    margin-bottom: 50px;
+  }
+  
+  .reg {
+    color: white;
+    background-color: rgba(10, 128, 125, 1);
+  }
+  
+  .log {
+    color: rgb(10, 128, 125);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(10, 128, 125, 1);
+}
+
+.log:hover{
+  color: aliceblue!important;
+}
+
+button:hover {
+  color: rgb(44, 100, 44);
+  
+  box-shadow: 0 0 20px rgba(10, 128, 125, 0.6);
+  background-color: rgba(10, 128, 125, 1);
+}
+  
+td {
+  text-align: center;
+}
+  
+  /* 3 */
+  .btn-3 {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(7, 112, 173,1) 0%, rgba(7, 112, 173,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 30px;
+    padding: 0;
+    border: none;
+    
+  }
+  .btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(7, 112, 173,1);
+    transition: all 0.2s ease;
+  }
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .btn-3:hover:before {
+    height: 100%;
+  }
+  .btn-3:hover:after {
+    width: 100%;
+  }
+  .btn-3 span:hover{
+     color: rgba(23, 161, 158,1);
+  }
+  .btn-3 span:before,
+  .btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(23, 161, 158,1);
+    transition: all 0.2s ease;
+  }
+  .btn-3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3 span:hover:before {
+    height: 100%;
+  }
+  .btn-3 span:hover:after {
+    width: 100%;
+  }
+  
+  /* 4 */
+  .btn-4 {
+    background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #17a19e 0%, #87d9de 74%);
+  line-height: 30px;
+    padding: 0;
+    border: none;
+  }
+  .btn-4:hover{
+    background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #87d9de 0%, #17a19e 74%);
+  }
+  .btn-4 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-4:before,
+  .btn-4:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.9),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    transition: all 0.3s ease;
+  }
+  .btn-4:before {
+    height: 0%;
+    width: .1px;
+  }
+  .btn-4:after {
+    width: 0%;
+    height: .1px;
+  }
+  .btn-4:hover:before {
+    height: 100%;
+  }
+  .btn-4:hover:after {
+    width: 100%;
+  }
+  .btn-4 span:before,
+  .btn-4 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.9),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    transition: all 0.3s ease;
+  }
+  .btn-4 span:before {
+    width: .1px;
+    height: 0%;
+  }
+  .btn-4 span:after {
+    width: 0%;
+    height: .1px;
+  }
+  .btn-4 span:hover:before {
+    height: 100%;
+  }
+  .btn-4 span:hover:after {
+    width: 100%;
+  }
+
+  .white-box { width: 600px; height: 530px; 
+    margin-top: 40px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 10px;   
+  
+    align-self: center;
+    padding-top: 50px;
+    
+    background-color: rgba(70, 69, 69, 0.633);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.25);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 6px;
+    }
+    #dropdown{
+      width: 210px;
+      margin-left: 195px;
+    }
+
+    #btn3:link, #btn3:visited{
+        color: rgba(23, 161, 158);
+    }
+    #btn3:hover{
+        color: rgba(23, 161, 158);
+    }
+    #btn3:active{
+        color: rgb(61, 117, 59);
+    }
+    #btn4:link, #btn4:visited{
+        color:  #fff;
+    }
+    #btn3:hover{
+        color: rgba(23, 161, 158);
+    }
+    #btn3:active{
+        color: rgba(23, 161, 158);
+    }
+    #btn5:link, #btn5:visited{
+        color: rgba(23, 161, 158);
+    }    
+    #btn5:active{
+        color: rgba(23, 161, 158);
+    }
+    #btn5:hover{
+        color: blue;
+    }
+    #btn5{
+        font-family:sans-serif;
+        font-weight: bold;
+    }

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+LOGIN
+{% endblock %}
+
+{% block body %}
+<div class="white-box" style="text-align: center; align-items: center;">
+    <div class="mt-3 mb-5" style="text-align: center;">
+        <h1>LOGIN</h1>
+    </div>
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div>
+            <input class="form-control mx-auto w-auto btn4" type="submit" value="Submit">
+        </div>
+    </form>
+    <div style="text-align: center; padding-top: 60px;">
+    <a href="/" id="btn5">Home</a>
+    </div>
+</div>
+{% endblock %}
