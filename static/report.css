@@ -1,0 +1,181 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    cursor: url('images/catscratch2.gif'), auto;
+    background-image: url("bg/Report_photo_final.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.background{
+    cursor: url('images/catscratch2.gif'), auto;
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    margin-top: 50px;
+    height: fit-content;
+    width: 500px;
+    background-color: rgba(74, 74, 74, 0.286);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 400px;
+    left: 50%;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(59, 59, 59, 0.1);
+    box-shadow: 0 0 20px rgba(8,7,16,0.6);
+    padding: 40px 35px ;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: url('catscratch2.gif'), auto;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.43);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+::placeholder{
+    color: #ffffff;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #159793b6;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.dropdown-content {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.214);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    
+
+}
+#submitbtn{
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: large;
+    background-color: #1cbdb8b6;
+}
+#submitbtn:hover{
+    box-shadow: 0 0 10px rgba(3, 86, 83, 0.6);
+}
+
+.log {
+    color: rgb(10, 128, 125);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .log:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgba(10, 128, 125, 1);
+    box-shadow: 0 0 20px rgba(10, 128, 125, 0.6);
+  }
+
+  .reg {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: #1bb5b1;
+    border-radius: 3px;
+    border-width: 0px;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    width: 80px;
+    height: 25px;
+  }
+
+  .reg:hover {
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+
+  #btn4 {
+    font-size: 25px!important;
+    color:  rgb(255, 255, 255);
+  }
+
+  #btn4:hover{
+    font-size: 28px!important;
+  }

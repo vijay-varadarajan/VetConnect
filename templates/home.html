@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+HOME
+{% endblock %}
+
+{% block body %}
+<div id="login-box" style="text-align: center; align-items: center; width: 550px; height: 460px">
+    
+    <img src="../static/images/VET_logo.png" alt="Logo" style="width: 300px; height: 200px" class="rounded">
+
+    <div class="frame">
+  
+        <button class="log"><span><a class="nav-link" href="/login" id="btn3">Login</a></span></button>
+        <button class="log"><span><a class="nav-link" href="/register" id="btn3">Register</a></span></button>
+        <button class="reg" style="height: 50px; width: 248px; margin-top: -25px; margin-bottom:15px;"><span><a class="nav-link" href="/report" id="btn4">Report an animal injury</a></span></button>
+        <br>
+        <a href="/addhosp"><i>Add your clinic</i></a>  
+    </div>
+
+</div>
+{% endblock %}

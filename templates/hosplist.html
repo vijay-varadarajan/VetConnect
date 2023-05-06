@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+CLINICS
+{% endblock %}
+
+{% block body %}
+<div class="white-box" id="hosplist">
+    <h1 id="hosp_list_header">Vet Clinics Nearby</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>NAME</td>
+                <td>TYPE</td>
+                <td>CONTACT DETAILS</td>
+                <td>LOCATION</td>
+                <td>SEE ON MAP</td>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+                {% for element in hosp %}
+                    <tr>
+                        <td>{{ element['Name'] }}</td>
+                        <td>{{ element['Type'] }}</td>
+                        <td>{{ element['Contact_Details'] }}</td>
+                        <td>{{ element['Address'] }}</td>
+                        <td><a target="_blank" href="{{ element['Map_link']}}" id="map_link">Locate↗</a></td>
+                    </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    <a href="\" id="homebtn"><i class="fa fa-fw fa-home"  style="font-size: 23px"></i></a>
+</div>
+{% endblock %}

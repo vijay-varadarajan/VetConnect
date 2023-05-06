@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ADD CLINIC
+{% endblock %}
+
+{% block body %}
+
+<div class="white-box">
+    <div class="heading">
+        <h1 class="heading">Add a vet hospital / clinic</h1>
+    </div>
+    <div class="mt-3 mb-5">
+        <form action="/addhosp" method="post" autocomplete="off">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus name="hosp_name" placeholder="Hospital Name" type="text">
+            </div>
+            <div class="form-group mx-auto" id="dropdown">
+                <select class="form-select col-md-3" id="inputGroupSelect01" name="type" placeholder="Type">
+                    <option selected>Type of animal</option>
+                    <option value="All">ALL</option>
+                    <option value="Dog">Dogs</option>
+                    <option value="Cat">Cats</option>
+                    <option value="Cow">Cows</option>
+                    <option value="Horse">Horses</option>
+                    <option value="Bird">Birds</option>
+                </select>
+            </div>
+            <div>
+                <input autocomplete="off" name="location" placeholder="Location" type="text">
+            </div>
+            <div style="display: grid; grid-template-columns: auto 200px;">
+                <input autocomplete="off" name="latitude" placeholder="Latitude of hospital" type="text" style="width: 180px">
+                <input autocomplete="off" name="longitude" placeholder="Longitude of hospital" type="text">
+            </div>
+            <div class="form-group mb-3">
+                <input autocomplete="off" name="contact" placeholder="Contact number" type="text">
+            </div>
+            <div class="form-group mb-3">
+                <input autocomplete="off" name="auth_id" placeholder="Authentication ID" type="text">
+            </div>
+            <div class="form-group mb-3">
+                <input class="form-control mx-auto w-auto" id="btn3" type="submit" value="Submit" style="height: 40px; font-size: 17px;">
+            </div>
+        </form>
+    </div>
+    <div class="backbtn">
+        <a href="/" id="btn5"><button class="reg"  id="btn5"  style="margin-left: 0px; margin-top: 5px; margin-bottom: 10px" >Cancel</button></a>
+    </div>
+</div>
+
+{% endblock %}
+

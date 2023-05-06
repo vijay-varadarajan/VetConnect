@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>
+        VetConnect: REPORT
+    </title>
+    <link href="../static/report.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="background">
+        <div class="shape">
+        </div>
+        <div class="shape">
+        </div>
+    </div>
+    <div>
+    <form action="/report" method="post">
+        <h3>Report an Animal Issue</h3>
+        
+        <label for="username">Complainant's Name</label>
+        <input type="text" placeholder="Your Name" name="username" id="username">
+        
+        <label for="phone_number">Contact No.</label>
+        <input type="text" placeholder="Phone Number" name="phone_number" id="phone_number">
+        
+        <label for="locality">Locality</label>
+        <input type="text" placeholder="Locality" name="locality" id="locality">
+        
+        <label for="city">City</label>
+        <input type="text" placeholder="City Name" name="city" id="city">
+
+        <label for="state">State</label>
+        <input type="text" placeholder="State Name" name="state" id="state">
+        
+        <label for="animal_type">Animal Category</label>
+        <input type="text" placeholder="Animal type" name="animal_type" id="animal_type">
+        
+        <label for="situation">Animal Issue </label>
+        <input type="text" placeholder="Describe Situation" id="situation">
+
+        <div style="display: grid; grid-template-columns: auto 200px;">
+            <a href="\" id="btn4"><i class="fa fa-fw fa-home" style="margin: 32px 0 0 10px; "></i></a>
+            <input type="submit" value="Submit" id="submitbtn" style="width: 360px; margin-left: -160px;">
+        </div>
+    </form>
+    
+</body>
+</html>

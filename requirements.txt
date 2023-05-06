@@ -1,0 +1,8 @@
+cs50
+flask
+flask_session
+math 
+geopy
+datetime
+werkzeug
+functools

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+USER HOME
+{% endblock %}
+
+{% block body %}
+<div>
+    <nav class="navbar">
+        <a href="/" class="navbar-logo"><img src="../static/images/VET_logo.png"></a>
+        <ul class="navbar-links">
+          <li><a href="/">Logout</a></li>
+        </ul>
+      </nav>
+    <div class="white-box" style="height: auto; margin-top: 100px">
+        <h2 style="text-align: center; color: aliceblue;">MY PETS</h2>
+        <table class="table table-borderless">
+            {% if petdetails %}
+            <thead>
+                <tr>
+                    <td>Sno.</td>
+                    <td>Name</td>
+                    
+                    <td>Weight</td>
+                    <td style="text-align: center">Vaccination</td>
+                </tr>
+            </thead>
+            {% endif %}
+            <tbody>
+                {% for element in petdetails %}
+                <tr>
+                    <td><b>{{ element['PetID'] }}</b></td>
+                    <td><b>{{ element['Petname'] }}</b> <sub>{{ element['Age'] }} yrs</sub></td>
+                    <td style="text-align: right; padding-right: 25px;">{{ element['Weight'] }} kg</td> 
+                    {% if element['Vaccinated'] == "on" %}
+                        <td style="text-align: center">✔</td>
+                    {% else %}
+                        <td style="text-align: center">❌</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+    {% if petdetails %}
+    <div class="modibtns">
+        <a href="/addpet" id="btn4"><button class="reg" style="width: 110px; height: 40px; margin: 10px 60px 0 15px"><span>Add</span></button></a>
+        <a href="/updatepet" id="btn4"><button class="reg" style="width: 110px; height: 40px; margin: 10px 60px 0 0"><span>Update</span></button></a>
+        <a href="/deletepet" id="btn4"><button class="reg" style="width: 110px; height: 40px; margin: 10px 20px 0 0"><span>Remove</span></button></a>
+    </div>
+    {% else %}
+    <div class="modibtns">
+        <a href="/addpet" id="btn4"><button class="reg" style="width: 500px; height: 50px; margin: 10px 10px 0 10px"><span>ADD YOUR PET</span></button></a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
