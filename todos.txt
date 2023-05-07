@@ -1,2 +1,5 @@
 Add more hospitals to database 
+implement reset password
+add notes field in addpet
+add web link column in hosplist
 Complete README
