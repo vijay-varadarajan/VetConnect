@@ -1,5 +1,6 @@
 # VETCONNECT
-### by Vijay Varadarajan with Keshav, Gaurav and Ayush
+### by Vijay Varadarajan 
+#### with **Keshav**, **Gaurav** and **Ayush**
 
 ### from Chennai, TamilNadu, India
 #### Video Demo:  <URL HERE>
