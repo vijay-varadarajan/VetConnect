@@ -118,6 +118,33 @@ def login():
     return render_template("login1.html")
 
 
+@app.route('/resetpass', methods=["GET", "POST"])
+def resetpass():
+    if request.method == "POST":
+        if not request.form.get("username") or not request.form.get("newpass") or not request.form.get("retypenewpass") or not request.form.get("email") or not request.form.get("contact"):
+            return apology("Must fill all fields")
+        
+        if request.form.get("newpass") != request.form.get("retypenewpass"):
+            return apology("Passwords don't match")
+        
+        username = request.form.get("username")
+        email = request.form.get("email")
+        contact = request.form.get("contact")
+        hashed_newpass = generate_password_hash(request.form.get("newpass"))
+        
+        if not db.execute("SELECT * FROM users WHERE Username = ? AND Email = ? AND Contact = ?", username, email, contact):
+            return apology("Invalid details. Try again")
+        
+        updated = db.execute("UPDATE users SET (hashed_pwd) = ? WHERE (Username) = ?", hashed_newpass, username)
+        
+        if not updated:
+            return apology("Invalid details. Register again")
+        
+        return redirect('/login')
+    
+    return render_template("resetpass.html")
+    
+
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -138,6 +165,12 @@ def register():
 
         if not request.form.get("username"):
             return apology("must provide username", 400)
+        
+        if not request.form.get("email"):
+            return apology("must provide email ID", 400)
+        
+        if not request.form.get("contact"):
+            return apology("must provide Contact number", 400)
 
         # Ensure password was submitted
         if not request.form.get("password"):
@@ -147,16 +180,20 @@ def register():
             return apology("passwords don't match", 400)
 
         username = request.form.get("username")
+        email = request.form.get("email")
+        contact = request.form.get("contact")
 
         hashed_password = generate_password_hash(request.form.get("password")) # type: ignore
 
         try:
             registrant = db.execute(
-                "INSERT INTO users (username, hashed_pwd) VALUES (?, ?)",
+                "INSERT INTO users (username, hashed_pwd, Contact, Email) VALUES (?, ?, ?, ?)",
                 username,
                 hashed_password,
+                contact,
+                email
             )
-            db.execute("CREATE TABLE ? (PetID INTEGER PRIMARY KEY, Petname TEXT, Petkind TEXT, Age INTEGER, Weight INTEGER, Vaccinated BOOLEAN)", username)
+            db.execute("CREATE TABLE ? (PetID INTEGER PRIMARY KEY, Petname TEXT, Petkind TEXT, Age INTEGER, Weight INTEGER, Vaccinated BOOLEAN, Notes TEXT)", username)
         except :
             return apology("Username exists", 400)
 
@@ -190,24 +227,20 @@ def addpet():
         if not request.form.get("petname"):
             return apology("Must provide pet name.")
         
-        if not request.form.get("petkind"):
+        if not request.form.get("petkind") or request.form.get("petkind") == "Pet kind":
             return apology("Must provide type of pet.")
-        
-        if not request.form.get("age"):
-            return apology("Must provide pet's age.")
-        
-        if not request.form.get("weight"):
-            return apology("Must provide weight.")
         
         petname = request.form.get("petname")
         petkind = request.form.get("petkind")
         age = request.form.get("age")
         weight = request.form.get("weight")
         vaccinated = request.form.get("vaccinated")
+        notes = request.form.get("notes")
+        print(notes)
 
         username = db.execute("SELECT Username FROM users WHERE ID = ?", session["user_id"])
         
-        db.execute("INSERT INTO ? (Petname, Petkind, Age, Weight, Vaccinated) VALUES (?, ?, ?, ?, ?)", username[0]['Username'], petname, petkind, age, weight, vaccinated)
+        db.execute("INSERT INTO ? (Petname, Petkind, Age, Weight, Vaccinated, Notes) VALUES (?, ?, ?, ?, ?, ?)", username[0]['Username'], petname, petkind, age, weight, vaccinated, notes)
 
         return redirect("/userhome")
     
@@ -247,6 +280,7 @@ def updatepet():
         age = request.form.get("age")
         weight = request.form.get("weight")
         vaccinated = request.form.get("vaccinated")
+        notes = request.form.get("notes")
         
         storedpets = [item['Petname'] for item in db.execute("SELECT (Petname) FROM ?", username[0]["Username"])]
         if oldname not in storedpets:
@@ -261,6 +295,10 @@ def updatepet():
                 
             if weight:
                 db.execute("UPDATE ? SET (Weight) = ? WHERE (Petname) = ?", username[0]['Username'], weight, oldname)
+                
+            if notes:
+                db.execute("UPDATE ? SET (Notes) = ? WHERE (Petname) = ?", username[0]['Username'], notes, oldname)
+                
                 
             db.execute("UPDATE ? SET (Vaccinated) = ? WHERE (Petname) = ?", username[0]["Username"], vaccinated, oldname)
             
@@ -351,17 +389,18 @@ def addhosp():
         latitude = request.form.get("latitude")
         longitude = request.form.get("longitude")
         contact = request.form.get("contact")
+        weblink = request.form.get("weblink")
         
 
         map_link = f"https://google.com/maps/place/{latitude}+{longitude}"
         
         if (check_password_hash(HOSP_PASS, auth_id) == True):
             # Add details to db
-            db.execute("INSERT INTO HospitalInfo (Name, Type, Address, Latitude, Longitude, Contact_details, Map_link) VALUES (?, ?, ?, ?, ?, ?, ?)", hosp_name, type, location, latitude, longitude, contact, map_link)
+            db.execute("INSERT INTO HospitalInfo (Name, Type, Address, Latitude, Longitude, Contact_details, Map_link, Web_link) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", hosp_name, type, location, latitude, longitude, contact, map_link, weblink)
         else:
             return apology("Invalid Authentication ID")
         
-        return redirect('/addhosp')
+        return redirect('/')
     
     return render_template("addhosp.html")
         

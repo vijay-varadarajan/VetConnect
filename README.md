@@ -38,11 +38,11 @@ In addition to this, the user can sign up and store details of their pet(s) in t
 
 ## Working
 
-1. The homepage of this website has buttons to take the user to login, register, report and add hospital pages.
+1. The homepage of this website has buttons to take the user to 'login', 'register', 'report' and 'add hospital' pages.
 
 2. The report section requires the user to fill a form with the details of their location and the trivial details of the animal that the user wants to report about. 
 
-3. After submitting, the user sees a table that lists the veterinary hospitals/clinics nearby along with contact details and link to maps that takes the user to google maps, for the directions to that place and a web link to the website of that place.
+3. After submitting the report, the user sees a table that lists the veterinary hospitals/clinics nearby along with contact details and link to maps that takes the user to google maps, for the directions to that place and a web link to the website of that place.
 
 4. From the homepage, the user can also add their hospital details through the 'add your hospital' link, provided their hospital is a legitimate veterinary centre. This is confirmed with the authentication ID, that is unique to this website.
 
@@ -50,16 +50,15 @@ In addition to this, the user can sign up and store details of their pet(s) in t
 
 6. The login page requires the user to login with the registerd username and password. It also allows the user to reset their password if forgotten, through the 'Forgot password' link.
 
-7. This link asks the user for their mail ID and phone number which is checked against the database and if authentic, a new page to reset password is displayed.
+7. The 'Forgot password' link asks the user for their username, mail ID and phone number which is checked against the database and if legit, the old hashed password is replaced with the new hashed password.
 
-8. After logging in / registering, the user can add details of his or her pets by clicking on 'Add', such as: the name, age, weight, vaccination status and additional notes.
+8. After logging in / registering, the user can add details of his or her pets by clicking on 'Add', such as: the name, age, weight, vaccination status and additional info if needed.
 
-9. The user's homepage as soon as they login displays the stored details of the pets.
+9. The user's homepage, as soon as they login, displays the stored details of the pets.
 
 10. These details can be modified through 'Modify' where the user needs to fill only the columns that need to be updated. 
 
 11. A pet can be removed through 'Remove' where the user needs to specify the name of the pet to remove.
-
 
 ## Implementation details
 

@@ -12,7 +12,7 @@ USER HOME
           <li><a href="/">Logout</a></li>
         </ul>
       </nav>
-    <div class="white-box" style="height: auto; margin-top: 100px">
+    <div class="white-box" style="height: auto; margin-top: 100px; width: 840px">
         <h2 style="text-align: center; color: aliceblue;">MY PETS</h2>
         <table class="table table-borderless">
             {% if petdetails %}
@@ -23,6 +23,8 @@ USER HOME
                     
                     <td>Weight</td>
                     <td style="text-align: center">Vaccination</td>
+                    <td style="text-align: center">Notes</td>
+
                 </tr>
             </thead>
             {% endif %}
@@ -30,13 +32,14 @@ USER HOME
                 {% for element in petdetails %}
                 <tr>
                     <td><b>{{ element['PetID'] }}</b></td>
-                    <td><b>{{ element['Petname'] }}</b> <sub>{{ element['Age'] }} yrs</sub></td>
+                    <td style="width: 150px"><b>{{ element['Petname'] }}</b> <sub>{{ element['Age'] }} yrs</sub></td>
                     <td style="text-align: right; padding-right: 25px;">{{ element['Weight'] }} kg</td> 
                     {% if element['Vaccinated'] == "on" %}
-                        <td style="text-align: center">✔</td>
+                    <td style="text-align: center">✔</td>
                     {% else %}
-                        <td style="text-align: center">❌</td>
+                    <td style="text-align: center">❌</td>
                     {% endif %}
+                    <td><b>{{ element['Notes'] }}</b></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -45,9 +48,9 @@ USER HOME
     </div>
     {% if petdetails %}
     <div class="modibtns">
-        <a href="/addpet" id="btn4"><button class="reg" style="width: 110px; height: 40px; margin: 10px 60px 0 15px"><span>Add</span></button></a>
-        <a href="/updatepet" id="btn4"><button class="reg" style="width: 110px; height: 40px; margin: 10px 60px 0 0"><span>Update</span></button></a>
-        <a href="/deletepet" id="btn4"><button class="reg" style="width: 110px; height: 40px; margin: 10px 20px 0 0"><span>Remove</span></button></a>
+        <a href="/addpet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 130px 0 15px"><span>Add</span></button></a>
+        <a href="/updatepet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 130px 0 0"><span>Update</span></button></a>
+        <a href="/deletepet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 20px 0 0"><span>Remove</span></button></a>
     </div>
     {% else %}
     <div class="modibtns">

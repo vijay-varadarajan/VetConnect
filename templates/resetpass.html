@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+RESET PASSWORD
+{% endblock %}
+
+{% block body %}
+
+<div class="white-box">
+    <div style="margin-bottom: 40px">
+        <h5 style="color:white">Fill the following details to reset password</h1>
+    </div>
+    <div class="mt-3 mb-5">
+        <form action="/resetpass" method="post" autocomplete="off">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus name="username" placeholder="Username" type="text">
+            </div>
+            <div>
+                <input autocomplete="off" name="email" placeholder="Registered email ID" type="text">
+            </div>
+            <div class="form-group mb-3">
+                <input autocomplete="off" name="contact" placeholder="Registered contact number" type="text">
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus name="newpass" placeholder="New password" type="password">
+            </div>
+            <div>
+                <input autocomplete="off" name="retypenewpass" placeholder="Retype new password" type="password">
+            </div>
+            <div class="form-group mb-3">
+                <input class="form-control mx-auto w-auto" id="btn3" type="submit" value="Submit" style="height: 40px; font-size: 17px;">
+            </div>
+        </form>
+    <div class="backbtn">
+        <a href="/" id="btn5"><button class="reg"  id="btn5"  style="margin-left: 0px; margin-top: 5px; margin-bottom: 10px" >Cancel</button></a>
+    </div>
+</div>
+
+{% endblock %}
+

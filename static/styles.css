@@ -490,3 +490,11 @@ i:hover {
   font-size: 18px;
   color: white;
 }
+#notesfield {
+  display: block!important;
+  margin-bottom: 10px!important;
+}
+#notesfield::placeholder {
+  text-align: left!important;
+  vertical-align: top!important;
+}
