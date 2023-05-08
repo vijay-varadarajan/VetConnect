@@ -57,7 +57,6 @@ The following dependencies must be installed using pip to run this web applicati
  - Flask-Session2
 
 </details>
-<br>
 
 ## Working / Usage instructions
 
