@@ -1,6 +1,6 @@
 # VETCONNECT
-### by Vijay Varadarajan 
-### with **KeshavKartha**, **Gaurav** and **Ayush**
+### by [Vijay Varadarajan](https://github.com/vijay-varadarajan)
+### with [Gaurav Choudhary](https://github.com/Gaurav-Choudhary2113), [Keshav Kartha](https://github.com/KeshavKartha),  and [Ayush Mishra](https://github.com/Ayush-07-Mishra)
 ### from TamilNadu, India
 
 #### Video Demo:  <URL HERE>
@@ -14,6 +14,8 @@ Legitimate veterinary hospitals with valid authentication IDs can add their hosp
 In addition to this, the user can sign up and store details of their pet(s) in the database and can access and modify it anytime they want. This allows users to keep track of their pet's needs and cater to the same.
 
 ## Features
+
++ The cursor is modified to look like a **cat's paw** ![Catpaw cursor](static/images/catscratch2.gif) , matching the website's theme.
 
 + Allows **quick reporting** without needing to login.
 
@@ -60,40 +62,33 @@ The following dependencies must be installed using pip to run this web applicati
 ## Working / Usage instructions
 
 1. Upon opening, the homepage of this website has buttons to take you to '**login**', '**register**', '**report**' and '**add vet clinic**' pages.
-![]()
+![Home page](static/images/vetconnecthome.png)
 
 2. The **report** section requires you to fill a form with the details of their location and the trivial details of the animal found.
-![]()
 
-3. After submitting the report, you can see the **list of veterinary hospitals/clinics** near your location.
-![]()
+3. After submitting the report, you can see the **list of veterinary hospitals/clinics** near your location, sorted by **distance**.
+![Hospital list page](static/images/vetconnecthosplist.png)
 
 4. This table also provides the **contact details**, link to the **location** on google maps and a web link to the **website** of each hospital.
-![]()
 
 5. From the homepage, a user can also add their hospital details through the '**add your vet clinic**' link, provided their hospital is a legitimate veterinary centre. This is confirmed with an **authentication ID**, that is unique to this website.
-![]()
 
-5. The **register page** requires you to create a new unique username and password along with their email ID and contact, to signup to the website.
-![]()
+6. The **register page** requires you to create a new unique username and password along with their email ID and contact, to signup to the website.
+![Register page](static/images/vetconnectregister.png)
 
-6. The **login page** requires you to login with the registerd username and password. It also allows you to reset your password if you forget it, through the '**Forgot password**' link which takes you to the **reset password** page.
-![]()
+7. The **login page** requires you to login with the registerd username and password. It also allows you to reset your password if you forget it, through the '**Forgot password**' link which takes you to the **reset password** page.
 
-7. The page to **reset password** asks you for your username, mail ID and phone number which is checked against the database and if legit, the old hashed password is replaced with the newly obtained hashed password, effectively changing your password.
-![]()
+8. The page to **reset password** asks you for your username, mail ID and phone number which is checked against the database and if legit, the old hashed password is replaced with the newly obtained hashed password, effectively changing your password.
 
-8. After logging in / registering, you can add details of your pets such as: name, age, weight, vaccination status and additional notes as well, through '**Add your pet**'.
-![]()
+9. After logging in / registering, Your **homepage** will display the stored details of your pets in a tabular format.
+![User home page](static/images/vetconnectuserhome.png).
 
-9. Your **homepage** will display the stored details of your pets in a tabular format.
-![]()
+10. You can add details of your pets such as: name, age, weight, vaccination status and additional notes as well, through '**Add your pet**'
 
-10. These details can be modified through '**Update**' where you have the ability to modify certain details of the pet you need to change.
-![]()
+11. These details can be modified through '**Update**' where you have the ability to modify certain details of the pet you need to change.
 
-11. The '**Remove**' page allows you to remove a pet from the list, by specifing the name of the pet to remove.
-![]()
+12. The '**Remove**' page allows you to remove a pet from the list, by specifing the name of the pet to remove.
+
 
 ## Implementation details
 
@@ -132,12 +127,34 @@ Each of the functions for the different routes of this application perform respe
 
 ### _**static**_
 
+This folder contains all the static files necessary for this web application. This includes the following **css files**: 
+
+ - **login.css**: stylesheet for the login page
+
+ - **register.css**: stylesheet for the register page
+ 
+ - **report.css**: stylesheet for report page
+ 
+ - **styles.css**: stylesheet for all the remaining pages
+
+This also includes the **background images** as well as the images for the **logo** and the **modified cursor**. 
+
 
 ### _**templates**_
+This folder contains the html templates for all the different routes in this web application. Most of the css for these pages are linked from the files in static while some are borrowed from [bootstrap](https://getbootstrap.com) and [font-awesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css)
 
+The **navbar** displayed on top of user's homepage after login uses bootstrap's documentation while the **house icon** in 'login', 'register' and 'report' pages is obtained from font-awesome.
 
 ### _**vet.db**_
+This is the database that is used to store all the user and hospital information entered into this web application. This database contains the following tables: 
 
+ * ### users
+    This stores the **information about the user** while registering which includes the ID, username, email ID, contact number and hashed password.
+
+    This table is used every time the user logs in to check if the username and password match with the stored info for **valid authentication**.
+
+ * ### HospitalInfo
+    This table contains the **information of the veterinary hospitals** that are added by users with a valid authentication ID. The info includes the name of the hospital, type (specific animal), coordinates, contact number, website and a link to google maps location (that is autogenerated based on the coordinates given).
 
 ### _**requirements.txt**_
 This file contains the names of the required python dependencies that need to be installed before launching this web application.

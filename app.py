@@ -352,7 +352,7 @@ def report():
         for i in range(len(hospitals)):
             hospitals[i]['Distance'] = distances[i][hospitals[i]['Name']]
             
-        hospitals = sorted(hospitals, key=lambda x: x['Distance'])
+        hospitals = sorted(hospitals, key=lambda x: x['Distance'])[:4]
         
         return render_template("hosplist.html", hosp = hospitals)
 
