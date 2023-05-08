@@ -60,11 +60,13 @@ The following dependencies must be installed using pip to run this web applicati
 ## Working / Usage instructions
 
 1. Upon opening, the homepage of this website has buttons to take you to '**login**', '**register**', '**report**' and '**add vet clinic**' pages.
+
 ![Home page](static/images/vetconnecthome.png)
 
 2. The **report** section requires you to fill a form with the details of their location and the trivial details of the animal found.
 
 3. After submitting the report, you can see the **list of veterinary hospitals/clinics** near your location, sorted by **distance**.
+
 ![Hospital list page](static/images/vetconnecthosplist.png)
 
 4. This table also provides the **contact details**, link to the **location** on google maps and a web link to the **website** of each hospital.
@@ -72,6 +74,7 @@ The following dependencies must be installed using pip to run this web applicati
 5. From the homepage, a user can also add their hospital details through the '**add your vet clinic**' link, provided their hospital is a legitimate veterinary centre. This is confirmed with an **authentication ID**, that is unique to this website.
 
 6. The **register page** requires you to create a new unique username and password along with their email ID and contact, to signup to the website.
+
 ![Register page](static/images/vetconnectregister.png)
 
 7. The **login page** requires you to login with the registerd username and password. It also allows you to reset your password if you forget it, through the '**Forgot password**' link which takes you to the **reset password** page.
@@ -79,6 +82,7 @@ The following dependencies must be installed using pip to run this web applicati
 8. The page to **reset password** asks you for your username, mail ID and phone number which is checked against the database and if legit, the old hashed password is replaced with the newly obtained hashed password, effectively changing your password.
 
 9. After logging in / registering, Your **homepage** will display the stored details of your pets in a tabular format.
+
 ![User home page](static/images/vetconnectuserhome.png).
 
 10. You can add details of your pets such as: name, age, weight, vaccination status and additional notes as well, through '**Add your pet**'
