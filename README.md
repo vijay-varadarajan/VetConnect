@@ -86,7 +86,7 @@ The following dependencies must be installed using pip to run this web applicati
 
 9. After logging in / registering, Your **homepage** will display the stored details of your pets in a tabular format.
 
-![User home page](static/images/vetconnectuserhome.png).
+![User home page](static/images/vetconnectuserhome.png)
 
 10. You can add details of your pets such as: name, age, weight, vaccination status and additional notes as well, through '**Add your pet**'
 
