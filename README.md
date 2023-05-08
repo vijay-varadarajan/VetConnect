@@ -1,6 +1,6 @@
 # VETCONNECT
-### by Vijay Varadarajan 
-### with **KeshavKartha**, **Gaurav** and **Ayush**
+### by [Vijay Varadarajan](https://github.com/vijay-varadarajan)
+### with [Keshav](https://github.com/KeshavKartha), [Gaurav](https://github.com/Gaurav-Choudhary2113) and [Ayush]()
 ### from TamilNadu, India
 
 #### Video Demo:  <URL HERE>
