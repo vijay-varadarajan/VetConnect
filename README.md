@@ -7,7 +7,7 @@
 #### Github repo link: [VetConnect-Source_code](https://github.com/vijay-varadarajan/VetConnect)
 
 ## About this project
-This is a web application made to promote veterinary healthcare and pet health in India. The main aim of this project is to increase awareness about animal health among the public. This primarily allows any user to submit a report about a stray or injured animal and the user receives a list of nearby veterinary hospitals/clinics with contact details and directions.
+This is a web application made to promote veterinary healthcare and pet health in India. The main aim of this project is to increase awareness about animal health among the public. The website primarily allows any user to submit a report about a stray or injured animal and the user receives a list of nearby veterinary hospitals/clinics with contact details and directions.
 
 Legitimate veterinary hospitals with valid authentication IDs can add their hospital names to the database through the same website.
 
