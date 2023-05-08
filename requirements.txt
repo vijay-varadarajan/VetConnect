@@ -1,8 +1,8 @@
 cs50
-flask
-flask_session
+Flask
+Flask-session2
 math 
 geopy
 datetime
-werkzeug
+Werkzeug
 functools

@@ -99,13 +99,48 @@ The following dependencies must be installed using pip to run this web applicati
 
 ### _**app.py**_
 
+This file includes the full code for the backend processing of this web application. This involves importing the required python libraries, defining the functions of all the different routes of this application along with wrapper functions for specific requirements such as **login required()**. We obtain the user's location using **Nominatim** from **geopy.geocoders**. 
+
+```python
+def get_coords(locality, city, state):
+    location = geolocator.geocode(f"{locality}, {city}, {state}")
+
+    lat1 = location.latitude    #user latitude
+    long1 = location.longitude  #user longitude
+    
+    return lat1, long1
+```
+
+It also contains the handwritten function to calculate the distance between two locations using the **Haversine formula**. This way, the distance calculated is highly accurate.
+
+```python
+def distance(lat1, long1, lat2, long2):
+
+    R = 6371 # Radius of the earth in km
+
+    Latdiff = math.radians(lat2-lat1)
+    Longdiff = math.radians(long2-long1)
+    
+    calc1 = math.sin(Latdiff/2) * math.sin(Latdiff/2) + math.cos(math.radians(lat1))* math.cos(math.radians(lat2)) * math.sin(Longdiff/2) * math.sin(Longdiff/2)
+    
+    distance = R * 2 * math.atan2(math.sqrt(calc1), math.sqrt(1-calc1)) 
+
+    return distance
+```
+
+Each of the functions for the different routes of this application perform respective tasks of either **rendering a HTML template** when called via '**GET**' method or **submitting a form** when called via '**POST**'. The details submitted are then checked according to the process and the database is updated whenever needed through **sql queries** using **SQL** from **cs50**.
+
 ### _**static**_
+
 
 ### _**templates**_
 
+
 ### _**vet.db**_
 
+
 ### _**requirements.txt**_
+This file contains the names of the required python dependencies that need to be installed before launching this web application.
 
 ## References
 

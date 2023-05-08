@@ -23,24 +23,21 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///vet.db")
 geolocator = Nominatim(user_agent="MyApp")
-HOSP_PASS = generate_password_hash("abcd")
+HOSP_PASS = generate_password_hash("#a1b2z26y25@!")
 
 
 def distance(lat1, long1, lat2, long2):
 
     R = 6371 # Radius of the earth in km
 
-    dLat = math.radians(lat2-lat1)
-    dLong = math.radians(long2-long1)
-    a = math.sin(dLat/2) * math.sin(dLat/2) + math.cos(math.radians(lat1))* math.cos(math.radians(lat2)) * math.sin(dLong/2) * math.sin(dLong/2)
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-    d = R * c # Distance in km
-    return d
+    Latdiff = math.radians(lat2-lat1)
+    Longdiff = math.radians(long2-long1)
+    calc1 = math.sin(Latdiff/2) * math.sin(Latdiff/2) + math.cos(math.radians(lat1))* math.cos(math.radians(lat2)) * math.sin(Longdiff/2) * math.sin(Longdiff/2)
+    distance = R * 2 * math.atan2(math.sqrt(calc1), math.sqrt(1-calc1)) 
+    return distance
 
 
 def get_coords(locality, city, state):
-    # Initialize Nominatim API
-
     location = geolocator.geocode(f"{locality}, {city}, {state}")
 
     lat1 = location.latitude    #user latitude
