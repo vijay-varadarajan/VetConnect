@@ -4,7 +4,7 @@ body {
   background-attachment: fixed;
   cursor: url('images/catscratch2.gif'), auto;
   background-size: cover;
-  
+  min-width: 700px;
 }
 h1 {
   position: relative;
@@ -104,7 +104,7 @@ input[type="checkbox"]{
   display: grid;
   width: 17px;
   height: 17px;
-  margin-left: 55%;
+  margin-left:60%;
   margin-top: -20px;
   margin-bottom: 20px;
 }
@@ -337,7 +337,9 @@ background-image: linear-gradient(315deg, #87d9de 0%, #17a19e 74%);
   width: 100%;
 }
 
-.white-box { width: 500px; height: calc(fit-content); 
+.white-box { 
+  width:30em; 
+  height: calc(fit-content); 
   margin-top: 20px; 
   margin-left: auto; 
   margin-right: auto; 
@@ -363,7 +365,6 @@ background-image: linear-gradient(315deg, #87d9de 0%, #17a19e 74%);
     align-items: center;
     justify-content: center;
   }
-  
 
   option {
     background-color: #575353;
