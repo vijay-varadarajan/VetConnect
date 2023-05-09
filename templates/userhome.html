@@ -6,13 +6,18 @@ USER HOME
 
 {% block body %}
 <div>
-    <nav class="navbar">
-        <a href="/" class="navbar-logo"><img src="../static/images/VET_logo.png"></a>
-        <ul class="navbar-links">
-          <li><a href="/">Logout</a></li>
-        </ul>
-      </nav>
-    <div class="white-box" style="height: auto; margin-top: 100px; width: 840px">
+    <div class="container">
+        <div style="display: inline-block; width: 80%; vertical-align: middle; margin: 20px 0 0 -3%">
+            <a href="/" class="navbar-logo"><img src="../static/images/VET_logo.png"></a>
+        </div>
+        <div style="display: inline-block; width: 20%; vertical-align: middle; margin: 20px -5% 0 0; text-align: right">
+            <ul class="navbar-links">
+              <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+      
+    </div>
+    <div class="white-box" style="height: auto; margin-top: 10px; width: 840px">
         <h2 style="text-align: center; color: aliceblue;">MY PETS</h2>
         <table class="table table-borderless">
             {% if petdetails %}
@@ -48,9 +53,9 @@ USER HOME
     </div>
     {% if petdetails %}
     <div class="modibtns">
-        <a href="/addpet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 130px 0 15px"><span>Add</span></button></a>
-        <a href="/updatepet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 130px 0 0"><span>Update</span></button></a>
-        <a href="/deletepet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 20px 0 0"><span>Remove</span></button></a>
+        <a href="/addpet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 30px 0 15px"><span>Add</span></button></a>
+        <a href="/updatepet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 30px 0 0"><span>Update</span></button></a>
+        <a href="/deletepet" id="btn4"><button class="reg" style="width: 150px; height: 45px; margin: 10px 10px 0 0"><span>Remove</span></button></a>
     </div>
     {% else %}
     <div class="modibtns">

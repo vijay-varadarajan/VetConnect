@@ -390,22 +390,10 @@ background-image: linear-gradient(315deg, #87d9de 0%, #17a19e 74%);
       width: 65px;
       padding: 5px;
   }
-/* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
+
 
 .navbar-logo img {
-  height: 60px; /* Adjust height as needed */
+  height: 80px; /* Adjust height as needed */
 }
 
 .navbar-links {
