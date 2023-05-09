@@ -19,11 +19,11 @@ In addition to this, the user can sign up and store details of their pet(s) in t
 
 + The cursor is modified to look like a **cat's paw** ![Catpaw cursor](static/images/catscratch2.gif) , matching the website's theme.
 
-+ Allows **quick reporting** without needing to login.
++ Allows **quick helping** without needing to login.
 
 + Sorts **nearby veterinary clinics/hospitals** based on the type of pet and distance.
 
-+ Displays names, contact details and **map location** of veterinary clinics nearby.
++ Displays **names**, **contact details**, **web link** and **map location** of veterinary clinics nearby.
 
 + The **authentication ID** of hospitals is checked while adding.
 
@@ -66,7 +66,7 @@ The following dependencies must be installed using pip to run this web applicati
 
 ![Home page](static/images/vetconnecthome.png)
 
-2. The **report** section requires you to fill a form with the details of their location and the trivial details of the animal found.
+2. The **Help an animal** section requires you to fill a form with the details of their location and the trivial details of the animal found.
 
 3. After submitting the report, you can see the **list of veterinary hospitals/clinics** near your location, sorted by **distance**.
 

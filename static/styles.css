@@ -4,7 +4,7 @@ body {
   background-attachment: fixed;
   cursor: url('images/catscratch2.gif'), auto;
   background-size: cover;
-  min-width: 700px;
+  min-width: 650px;
 }
 h1 {
   position: relative;
@@ -21,6 +21,9 @@ h1 {
   width: 800px; 
   height: fit-content;
 }
+img {
+  height: 80px;
+}
 #login-box {
   position: relative;
   margin: 5% auto;
@@ -29,7 +32,7 @@ h1 {
   backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(85, 85, 85, 0.582);
   border-radius: 2px;
-  padding-top: 40px;
+  padding-top: 20px;
   background-color: #7777779b;
 }
 p {
@@ -48,7 +51,7 @@ p {
 }
 .frame {
   width: 90%;
-  margin: 40px auto;
+  margin: 0 auto;
   text-align: center;
 }
 button {
@@ -144,7 +147,7 @@ button {
 
 #btn3 {
   text-decoration: none;
-  width: 90px;
+  width: 110px;
   color:  rgba(10, 128, 125, 1);
   text-align: center;
 }
@@ -393,8 +396,9 @@ background-image: linear-gradient(315deg, #87d9de 0%, #17a19e 74%);
   }
 
 
-.navbar-logo img {
+.rounded{
   height: 80px; /* Adjust height as needed */
+  margin-bottom: 20px;
 }
 
 .navbar-links {
