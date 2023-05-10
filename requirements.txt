@@ -1,7 +1,7 @@
 cs50
 Flask
-Flask-session2
-math 
+Flask-Session
+python-math
 geopy
 datetime
 Werkzeug
