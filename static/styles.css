@@ -22,7 +22,9 @@ h1 {
   height: fit-content;
 }
 img {
-  height: 80px;
+  height: 120px;
+  margin-top: -30px;
+  margin-bottom: -40px;
 }
 #login-box {
   position: relative;
@@ -51,7 +53,7 @@ p {
 }
 .frame {
   width: 90%;
-  margin: 0 auto;
+  margin: -120px auto;
   text-align: center;
 }
 button {
