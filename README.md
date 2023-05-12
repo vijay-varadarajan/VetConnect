@@ -4,7 +4,7 @@
 ### from TamilNadu, India
 
 #### Video demo: <URL>
-#### Github repo link: [VetConnect-Source_code](https://github.com/vijay-varadarajan/VetConnect)
+#### Github repo link: [VetConnect-source_code](https://github.com/vijay-varadarajan/VetConnect)
 
 ## About this project
 This is a web application made to promote veterinary healthcare and pet health in India. The main aim of this project is to increase awareness about animal health among the public. 
