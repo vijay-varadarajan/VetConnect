@@ -478,11 +478,14 @@ a:hover {
   transition: 1ms;
 }
 i{
+  font-size: 18px;
+  font-weight: 600;
   color: white;
   transition: 1ms;
 }
 i:hover {
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 20px;
   color: white;
 }
 #notesfield {

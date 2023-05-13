@@ -272,7 +272,7 @@ def userhome():
         counter += 1
 
     # render user's home page template with pet details
-    return render_template("userhome.html", petdetails=petdetails)
+    return render_template("userhome.html", petdetails=petdetails, user=username[0]["Username"])
 
 
 # route to add pet - requires login

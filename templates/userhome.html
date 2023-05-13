@@ -7,10 +7,13 @@ USER HOME
 {% block body %}
 <div>
     <div class="container">
-        <div style="display: inline-block; width: 70%; vertical-align: middle; margin: 2% 0 0 -3%">
+        <div style="display: inline-block; width: 25%; vertical-align: middle; margin: 2% 0 0 -3%">
             <a href="/" class="navbar-logo"><img src="../static/images/VET_logo.png"></a>
         </div>
-        <div style="display: inline-block; width: 30%; vertical-align: middle; padding: 20px 0px 0 0; text-align: right">
+        <div style="display: inline-block; width: 60%; vertical-align: middle; margin: 2% 0 0 5px; padding-left: 19%">
+            <h2>Hi there, {{ user }}</h2>
+        </div>
+        <div style="display: inline-block; width: 10%; vertical-align: middle; padding: 20px 0px 0 5px; text-align: right; margin-left: 25px">
             <ul class="navbar-links">
               <li><a href="/">Logout</a></li>
             </ul>
@@ -18,7 +21,7 @@ USER HOME
       
     </div>
     <div class="white-box" style="height: auto; margin-top: 10px; width: 75%">
-        <h2 style="text-align: center; color: aliceblue;">MY PETS</h2>
+        <h2 style="text-align: center; color: aliceblue;">YOUR PETS</h2>
         <table class="table table-borderless">
             {% if petdetails %}
             <thead>
