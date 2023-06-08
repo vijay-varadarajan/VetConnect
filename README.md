@@ -52,7 +52,6 @@ The following dependencies must be installed using pip to run this web applicati
 <summary><b>Python dependencies</b></summary>
 
  - math
- - functools
  - Werkzeug
  - geopy
  - cs50
